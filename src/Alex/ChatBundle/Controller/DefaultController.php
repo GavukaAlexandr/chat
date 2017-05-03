@@ -8,6 +8,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ChatBundle:Default:index.html.twig');
+//        $user = $this->getUser();
+        return $this->render( 'ChatBundle:Default:index.html.twig');
     }
 }

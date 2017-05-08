@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="message")
  * @ORM\Entity(repositoryClass="Alex\ChatBundle\Repository\MessageRepository")
  */
-class Message
+class Message implements \JsonSerializable
 {
     /**
      * @var int
@@ -22,9 +22,8 @@ class Message
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="user", type="string", length=255)
+     * Many Messages have One User
+     * @ORM\ManyToOne(targetEntity="User")
      */
     private $user;
 
@@ -92,5 +91,22 @@ class Message
     public function getBody()
     {
         return $this->body;
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    function jsonSerialize()
+    {
+        return [
+            'id' => $this->getId(),
+            'user' => $this->getUser(),
+            'message' => $this->getBody(),
+        ];
+        // TODO: Implement jsonSerialize() method.
     }
 }

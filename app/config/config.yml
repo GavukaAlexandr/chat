@@ -78,3 +78,14 @@ fos_user:
         address: "admin@admin.com"
         sender_name: "admin"
 
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+
+#doctrine_migrations:
+#    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+#    namespace: Application\Migrations
+#    table_name: migration_versions
+#    name: Application Migrations

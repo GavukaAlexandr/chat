@@ -43,6 +43,7 @@ class User extends BaseUser implements \JsonSerializable
     function jsonSerialize()
     {
         return [
+            'id' => $this->getId(),
             'name' => $this->getUsername(),
         ];
         // TODO: Implement jsonSerialize() method.

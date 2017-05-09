@@ -4,7 +4,6 @@ namespace Alex\ChatBundle\Controller;
 
 use Alex\ChatBundle\Entity\Message;
 use Alex\ChatBundle\Entity\User;
-use DateInterval;
 use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -14,7 +13,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render( 'ChatBundle:Default:index.html.twig');
+        return $this->render('ChatBundle:Default:index.html.twig');
     }
 
     public function saveMessageAction(Request $request)

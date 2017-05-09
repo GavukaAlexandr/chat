@@ -1,6 +1,6 @@
 .left_aside {
-    border: solid 1px;
-    height: 300px;
+    /*border: solid 1px;*/
+    /*height: 300px;*/
 
 }
 
@@ -10,7 +10,6 @@
 
 .chat {
     overflow: auto;
-    /*border: solid 1px;*/
     height: 50rem;
 }
 
@@ -38,7 +37,9 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #218BC3;
-
-    /*border: solid 1px;*/
     height: 6rem;
+}
+
+.site-header {
+    height: 3rem;
 }

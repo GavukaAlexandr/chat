@@ -1,0 +1,45 @@
+.left_aside {
+    /*border: solid 1px;*/
+    /*height: 300px;*/
+
+}
+
+.content {
+    min-height:100%;
+}
+
+.chat {
+    overflow: auto;
+    height: 50rem;
+}
+
+.chat span {
+    word-wrap: break-word;
+}
+
+.chat span span {
+    float: left;
+}
+
+.messages {
+    padding: 2rem;
+}
+
+.user-name {
+    background-color: #218BC3;
+    border-radius: 15%;
+    padding: 0.5rem;
+    color: #ffffdd;
+    margin-right: 1rem;
+}
+
+.message {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #218BC3;
+    height: 6rem;
+}
+
+.site-header {
+    height: 3rem;
+}

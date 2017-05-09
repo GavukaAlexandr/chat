@@ -1,0 +1,20 @@
+chat_homepage:
+    path:     /
+    defaults: { _controller: ChatBundle:Default:index }
+
+save_message:
+    path:     /save-message
+    defaults: { _controller: ChatBundle:Default:saveMessage }
+
+get_messages:
+    path:     /get-messages
+    defaults: { _controller: ChatBundle:Default:getMessages }
+
+get_new_messages:
+    path:     /get-new-messages/{lastMessageId}
+    defaults: { _controller: ChatBundle:Default:getNewMessages }
+
+get_users:
+    path: /get-users
+    defaults: { _controller: ChatBundle:Default:getUsers }
+
